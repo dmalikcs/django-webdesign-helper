@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+django_webhelper.egg-info/PKG-INFO
+django_webhelper.egg-info/SOURCES.txt
+django_webhelper.egg-info/dependency_links.txt
+django_webhelper.egg-info/top_level.txt
+webhelper/__init__.py
+webhelper/admin.py
+webhelper/models.py
+webhelper/tests.py
+webhelper/urls.py
+webhelper/views.py
+webhelper/templates/webhelper/base.html
+webhelper/templates/webhelper/index.html

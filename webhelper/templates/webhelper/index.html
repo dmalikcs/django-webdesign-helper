@@ -1,0 +1,24 @@
+{% extends 'webhelper/base.html' %}
+{% load webhelper_tags %}
+
+{% block content %}
+Welcome to content 
+
+<footer>
+facebook links: {% get_social_link 'facebook' %}
+linkedin: {% get_social_link 'linkedin' %}
+</footer>
+<address>
+Address:
+{% get_office_address  as add %}
+{{ add.name }}
+{{ add.country }}
+<address>
+
+{% get_register_address as add %}
+{{ add.name }}
+{{ add.country }}
+
+{% get_general_info 'phone_2' %}
+
+{% endblock %}
