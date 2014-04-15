@@ -3,6 +3,13 @@ from django.contrib.sites.models import Site
 
 
 class SocialLinks(models.Model):
+    '''
+    facebook
+    linkedin
+    twitter
+    gluse
+    rss
+    '''
     facebook = models.URLField(
         max_length=100,
         blank=True,
@@ -35,10 +42,13 @@ class SocialLinks(models.Model):
         verbose_name_plural = 'Soical Links'
 
     def __unicode__(self):
-        return u'%i' % self.site.domain
+        return self.site.domain
 
 
 class BaseAddress(models.Model):
+    '''
+    BaseAddress model extend in OfficeAddress/RegisterAddress
+    '''
     name = models.CharField(
         max_length=30,
         blank=True,
@@ -129,4 +139,4 @@ class GeneralInfo(models.Model):
         verbose_name_plural = 'general infos'
 
     def __unicode__(self):
-        return u'%s' % self.id
+        return self.site.domain
