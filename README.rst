@@ -12,7 +12,7 @@ Installation
 
 .. code-block:: shell
 
-    $pip install -e git://github.com/dmalikcs/django-webhelper-helper.git#egg=webhelper-helper
+    $pip install -e git://github.com/dmalikcs/django-webhelper.git#egg=webhelper
 
 * Add "webhelper" to your INSTALLED_APPS setting like this
 
