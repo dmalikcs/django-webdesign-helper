@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.sites.models import Site
+from django.core.validators  import RegexValidator
 
 
 class SocialLinks(models.Model):
@@ -99,23 +100,52 @@ class OfficeAddress(BaseAddress):
 
 
 class GeneralInfo(models.Model):
-    phone_1 = models.IntegerField(
+    phone_1 = models.CharField(
+        max_length=15,
         blank=True,
-        null=True
+        null=True,
+        validators=[
+            RegexValidator(
+                r'^[-\d+]+$',
+                'Enter the valid phone number'
+            ),
+        ]
     )
-    phone_2 = models.IntegerField(
+    phone_2 = models.CharField(
+        max_length=15,
         blank=True,
-        null=True
+        null=True,
+        validators=[
+            RegexValidator(
+                r'^[-\d+]+$',
+                'Enter the valid phone number'
+            ),
+        ]
     )
-    phone_3 = models.IntegerField(
+    phone_3 = models.CharField(
+        max_length=15,
         blank=True,
-        null=True
+        null=True,
+        validators=[
+            RegexValidator(
+                r'^[-\d+]+$',
+                'Enter the valid phone number'
+            ),
+        ]
     )
-    fax = models.IntegerField(
+    fax = models.CharField(
+        max_length=15,
         blank=True,
-        null=True
+        null=True,
+        validators=[
+            RegexValidator(
+                r'^[-\d+]+$',
+                'Enter the valid Fax number'
+            ),
+        ]
     )
-    tollfree = models.IntegerField(
+    tollfree = models.CharField(
+        max_length=11,
         blank=True,
         null=True
     )
