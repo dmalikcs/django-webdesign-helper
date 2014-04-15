@@ -5,7 +5,7 @@ from django import template
 register = template.Library()
 
 
-@register.simple_tag(takes_context=True)
+@register.assignment_tag(takes_context=True)
 def get_social_link(context, sociallink):
     '''
         ...
@@ -74,7 +74,7 @@ def get_register_address(context):
     return address
 
 
-@register.simple_tag(takes_context=True)
+@register.assignment_tag(takes_context=True)
 def get_general_info(context, ask_for):
     '''
         ...
